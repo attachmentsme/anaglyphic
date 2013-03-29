@@ -13,9 +13,13 @@ $(document).ready(function(){
 
   this.loadPage = function() {
     $('.anaglyph-window').attr('src', $('#site-url-field').val());
-    $('.anaglyph-window').load(function() {
-      console.log('aha!')
-    })
+    setTimeout(function(){
+      _this.anaglyphPage();
+    },5000);
+  }
+
+  this.anaglyphPage = function() {
+    console.log('woohoo look at me making an anaglyph!');
   }
 
   this.init();
