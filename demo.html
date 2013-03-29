@@ -1,9 +1,13 @@
 <html>
+<base id="base-url" href="#">
   <head>
-    <script src="anaglyphic.js"></script>
+    <script src="javascript/third_party/jquery.min.js"></script>
+    <script src="javascript/anaglyphic.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/anaglyphic.css" media="screen" />
   </head>
   <body>
-      <input tpye="text" size="80" placeholder="website goes here"></input>
-      <button id="load-new-site-button"> anaglpyh this website </button>
+      <input id="site-url-field" type="text" size="80" placeholder="website goes here"></input>
+      <button id="load-site-button"> anaglyph this website </button>
+      <iframe class="anaglyph-window" id="glyphed-site-frame"></iframe>
   </body>
 </html>
