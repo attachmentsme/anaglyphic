@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Testing 3d depths on different elements</title>
+    <link rel="stylesheet" href="stylesheets/anaglyphic.css">
+    <link rel="stylesheet" href="stylesheets/3dtests.css">
+    <script src="third_party/jquery.min.js"></script>
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="home">
+
+    <p class="anaglyphic_16">The quick brown fox jumps over the lazy dog</p>
+    <img src="images/bridge.jpg" class="anaglyphic_16" />
+	<p class="anaglyphic_15">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_14">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_13">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_12">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_11">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_10">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_9">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_8">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_7">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_6">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_5">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_4">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_3">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_2">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_1">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_0">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-1">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-2">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-3">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-4">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-5">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-6">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-7">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-8">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-9">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-10">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-11">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-12">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-13">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-14">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-15">The quick brown fox jumps over the lazy dog</p>
+	<p class="anaglyphic_-16">The quick brown fox jumps over the lazy dog</p>
+
+    <script>
+    $( document ).ready(function() {
+        $( "[class^=anaglyphic]" ).each(function() {
+        	var classNames = $(this).attr("class");
+            $(this).css( "color", "rgba(0,255,255,0.5)" );
+            $(this).css( "text-shadow", "rgba(255,0,0,0.5) " + classNames.split("_")[1] + "px 0px 0px");
+        });
+        $( "img[class^=anaglyphic]" ).each(function() {
+        	$(this).css("opacity", "0.5")
+        	$(this).wrap('<div class="tintBlue"></div>');  
+        	$(this).clone().insertAfter(this).wrap('<div class="tintRed"></div>');
+			$(redImage)
+			console.log(redImage);
+        });
+    });
+    </script>
+
+</body>
+</html>
