@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Anaglyphic",
+  "description": "This extension will transform the dom of any website into a 3d anaglyph.",
+  "version": "0.1",
+  "background": {
+    "scripts":["background.js"]
+  },
+  "web_accessible_resources" : [
+    "javascript/anaglyphic.js",
+    "javascript/third_party/jquery.min.js"
+  ],
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "manifest_version" : 2
+}
