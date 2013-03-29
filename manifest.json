@@ -8,7 +8,8 @@
     "scripts":["background.js"]
   },
   "web_accessible_resources" : [
-    "javascript/anaglyphic.js"
+    "javascript/anaglyphic.js",
+    "javascript/third_party/jquery.min.js"
   ],
   "permissions": [
     "http://*/*",

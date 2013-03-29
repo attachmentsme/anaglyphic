@@ -7,13 +7,9 @@ function anaglyphPageOnTab(tab) {
   chrome.tabs.executeScript(null, 
   {
     code:"document.body.appendChild(document.createElement('script')).src='" + chrome.extension.getURL("javascript/anaglyphic.js") +"';"
-  }, function () {
-    console.log('i did that stuff you wanted')
+  }, function () {});
+  chrome.tabs.executeScript(null, 
+  {
+    code:"document.body.appendChild(document.createElement('script')).src='" + chrome.extension.getURL("javascript/third_party/jquery.min.js") +"';"
   });
 }
-function anaglyphTab(tab) {
-  console.log('hello');
-}
-
-
-
