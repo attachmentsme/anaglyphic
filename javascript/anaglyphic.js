@@ -8,7 +8,7 @@
   this.anaglyphPage = function() {
     var maxDomDepth = _this.findDomDepth();
     $('body *').each(function(element) {
-      var itemDomDepth = $(this).parents().length + 1;
+      var itemDomDepth = $(this).parents().length;
       _this.applyAnaglyphClassToElement($(this), _this.normalizeAnaglyphLevel(itemDomDepth, maxDomDepth));
     });
     _this.applyStyling();
@@ -18,7 +18,7 @@
     var treeDepth = 0;
     $('body *').each(function(element) {
       if($(this).parents().length > treeDepth) {
-        treeDepth = $(this).parents().length + 1;
+        treeDepth = $(this).parents().length;
       }
     });
     return treeDepth;
@@ -39,7 +39,7 @@
     $( "[class^=anaglyphic]" ).each(function() {
       var classNames = $(this).attr("class");
       $(this).css( "color", "rgba(0,255,255,0.5)" );
-      $(this).css( "text-shadow", "rgba(255,0,0,0.5) " + classNames.split("_")[1] + "px 0px 0px");
+      $(this).css( "text-shadow", "rgba(255,0,0,0.5) " + classNames.split("_").pop() + "px 0px 0px");
     });
     $( "img[class^=anaglyphic]" ).each(function() {
       $(this).css("opacity", "0.5")
