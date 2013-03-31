@@ -29,8 +29,9 @@
   }
 
   this.normalizeAnaglyphLevel = function(itemDomDepth, maxDomDepth) {
-    normalizedLevel = Math.floor(((32.0 / maxDomDepth) * itemDomDepth) - 16.0);
-    if (normalizedLevel > 16) normalizedLevel = 16;
+    normalizedLevel = Math.floor(((16.0 / maxDomDepth) * itemDomDepth) - 16.0);
+    //if (normalizedLevel > 16) normalizedLevel = 16;
+    if (normalizedLevel > 0) normalizedLevel = 0;
     if (normalizedLevel < -16) normalizedLevel = -16;
     return normalizedLevel;
   }
@@ -41,11 +42,11 @@
       $(this).css( "color", "rgba(0,255,255,0.5)" );
       $(this).css( "text-shadow", "rgba(255,0,0,0.5) " + classNames.split("_").pop() + "px 0px 0px");
     });
-    $( "img[class^=anaglyphic]" ).each(function() {
-      $(this).css("opacity", "0.5")
-      $(this).wrap('<div class="tintBlue"></div>');  
-      $(this).clone().insertAfter(this).wrap('<div class="tintRed"></div>');
-    });
+    //$( "img[class^=anaglyphic]" ).each(function() {
+      //$(this).css("opacity", "0.5")
+      //$(this).wrap('<span class="tintBlue"></span>');  
+      //$(this).clone().insertAfter(this).wrap('<span class="tintRed"></span>');
+    //});
   }
 
   this.init();
