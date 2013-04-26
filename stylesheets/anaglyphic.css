@@ -21,3 +21,343 @@
 	right: 0;  
 	background: rgba(255,0,0, 0.5);
 }
+
+/* ANAGLYPHS FOR MIDDLE BACKGROUNDS */
+
+.anaglyphic-no-style {
+	text-shadow: none;
+}
+
+/* ANAGLYPHS FOR LIGHT BACKGROUNDS */
+
+.anaglyphic-light_-16 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -16px 0px 0px !important;
+}
+
+.anaglyphic-light_-15 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -15px 0px 0px !important;
+}
+
+.anaglyphic-light_-14 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -14px 0px 0px !important;
+}
+
+.anaglyphic-light_-13 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -13px 0px 0px !important;
+}
+
+.anaglyphic-light_-12 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -12px 0px 0px !important;
+}
+
+.anaglyphic-light_-11 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -11px 0px 0px !important;
+}
+
+.anaglyphic-light_-10 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -10px 0px 0px !important;
+}
+
+.anaglyphic-light_-9 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -9px 0px 0px !important;
+}
+
+.anaglyphic-light_-8 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -8px 0px 0px !important;
+}
+
+.anaglyphic-light_-7 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -7px 0px 0px !important;
+}
+
+.anaglyphic-light_-6 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -6px 0px 0px !important;
+}
+
+.anaglyphic-light_-5 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -5px 0px 0px !important;
+}
+
+.anaglyphic-light_-4 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -4px 0px 0px !important;
+}
+
+.anaglyphic-light_-3 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -3px 0px 0px !important;
+}
+
+.anaglyphic-light_-2 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -2px 0px 0px !important;
+}
+
+.anaglyphic-light_-1 {
+	color: rgba(255,0,0,0.5) !important; 
+	text-shadow: rgba(0,255,255,0.5) -1px 0px 0px !important;
+}
+
+.anaglyphic-light_0 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 0px 0px 0px !important;
+}
+
+.anaglyphic-light_1 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 1px 0px 0px !important;
+}
+
+.anaglyphic-light_2 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 2px 0px 0px !important;
+}
+
+.anaglyphic-light_3 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 3px 0px 0px !important;
+}
+
+.anaglyphic-light_4 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 4px 0px 0px !important;
+}
+
+.anaglyphic-light_5 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 5px 0px 0px !important;
+}
+
+.anaglyphic-light_6 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 6px 0px 0px !important;
+}
+
+.anaglyphic-light_7 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 7px 0px 0px !important;
+}
+
+.anaglyphic-light_8 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 8px 0px 0px !important;
+}
+
+.anaglyphic-light_9 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 9px 0px 0px !important;
+}
+
+.anaglyphic-light_10 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 10px 0px 0px !important;
+}
+
+.anaglyphic-light_11 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 11px 0px 0px !important;
+}
+
+.anaglyphic-light_12 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 12px 0px 0px !important;
+}
+
+.anaglyphic-light_13 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 13px 0px 0px !important;
+}
+
+.anaglyphic-light_14 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 14px 0px 0px !important;
+}
+
+.anaglyphic-light_15 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 15px 0px 0px !important;
+}
+
+.anaglyphic-light_16 {
+	color: rgba(255,0,0,0.5) !important;
+	text-shadow: rgba(0,255,255,0.5) 16px 0px 0px !important;
+}
+
+/* ANAGLYPHS FOR DARK BACKGROUNDS */
+
+.anaglyphic-dark_-16 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -16px 0px 0px !important;
+}
+
+.anaglyphic-dark_-15 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -15px 0px 0px !important;
+}
+
+.anaglyphic-dark_-14 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -14px 0px 0px !important;
+}
+
+.anaglyphic-dark_-13 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -13px 0px 0px !important;
+}
+
+.anaglyphic-dark_-12 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -12px 0px 0px !important;
+}
+
+.anaglyphic-dark_-11 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -11px 0px 0px !important;
+}
+
+.anaglyphic-dark_-10 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -10px 0px 0px !important;
+}
+
+.anaglyphic-dark_-9 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -9px 0px 0px !important;
+}
+
+.anaglyphic-dark_-8 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -8px 0px 0px !important;
+}
+
+.anaglyphic-dark_-7 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -7px 0px 0px !important;
+}
+
+.anaglyphic-dark_-6 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -6px 0px 0px !important;
+}
+
+.anaglyphic-dark_-5 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -5px 0px 0px !important;
+}
+
+.anaglyphic-dark_-4 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -4px 0px 0px !important;
+}
+
+.anaglyphic-dark_-3 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -3px 0px 0px !important;
+}
+
+.anaglyphic-dark_-2 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -2px 0px 0px !important;
+}
+
+.anaglyphic-dark_-1 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) -1px 0px 0px !important;
+}
+
+.anaglyphic-dark_0 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 0px 0px 0px !important;
+}
+
+.anaglyphic-dark_1 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 1px 0px 0px !important;
+}
+
+.anaglyphic-dark_2 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 2px 0px 0px !important;
+}
+
+.anaglyphic-dark_3 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 3px 0px 0px !important;
+}
+
+.anaglyphic-dark_4 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 4px 0px 0px !important;
+}
+
+.anaglyphic-dark_5 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 5px 0px 0px !important;
+}
+
+.anaglyphic-dark_6 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 6px 0px 0px !important;
+}
+
+.anaglyphic-dark_7 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 7px 0px 0px !important;
+}
+
+.anaglyphic-dark_8 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 8px 0px 0px !important;
+}
+
+.anaglyphic-dark_9 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 9px 0px 0px !important;
+}
+
+.anaglyphic-dark_10 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 10px 0px 0px !important;
+}
+
+.anaglyphic-dark_11 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 11px 0px 0px !important;
+}
+
+.anaglyphic-dark_12 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 12px 0px 0px !important;
+}
+
+.anaglyphic-dark_13 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 13px 0px 0px !important;
+}
+
+.anaglyphic-dark_14 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 14px 0px 0px !important;
+}
+
+.anaglyphic-dark_15 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 15px 0px 0px !important;
+}
+
+.anaglyphic-dark_16 {
+	color: rgba(0,255,255,0.5) !important; 
+	text-shadow: rgba(255,0,0,0.5) 16px 0px 0px !important;
+}

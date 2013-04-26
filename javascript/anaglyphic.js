@@ -7,11 +7,15 @@
 
   this.anaglyphPage = function() {
     var maxDomDepth = _this.findDomDepth();
-    $('body *').each(function(element) {
-      var itemDomDepth = $(this).parents().length;
-      _this.applyAnaglyphClassToElement($(this), _this.normalizeAnaglyphLevel(itemDomDepth, maxDomDepth));
+    var hiddenCanvas;
+    html2canvas(document.body, {
+      onrendered: function(canvas) {
+        $('body *').each(function(element) {
+          var itemDomDepth = $(this).parents().length;
+          _this.applyAnaglyphClassToElement($(this), _this.normalizeAnaglyphLevel(itemDomDepth, maxDomDepth), _this.getBackgroundColorOfLocation(canvas, $(this).offset().top, $(this).offset().left));
+        });
+      }
     });
-    _this.applyStyling();
   }
 
   this.findDomDepth = function() {
@@ -24,29 +28,45 @@
     return treeDepth;
   }
 
-  this.applyAnaglyphClassToElement = function(element, level) {
-    element.addClass('anaglyphic_' + level);
+  this.applyAnaglyphClassToElement = function(element, level, backgroundColorArray) {
+    darknessLevel = getBackgroundDarknessLevel(backgroundColorArray[0], backgroundColorArray[1], backgroundColorArray[2])
+    if (darknessLevel == 0) {
+      element.addClass('anaglyphic-dark_' + level);
+    }
+    else if (darknessLevel == 2){
+      element.addClass('anaglyphic-light_' + level);
+    }
+    else{
+      element.addClass('anaglyphic-no-style');
+      console.log(element);
+      console.log(backgroundColorArray);
+    }    
+  }
+
+  //returns 0-2, dark -> mid -> light
+  this.getBackgroundDarknessLevel = function(red, green, blue) {
+    var darknessThresholdValue = 60,
+    lightnessThresholdValue = 130,
+    luminosity = 0.299 * red + 0.587 * green + 0.114 * blue;//0.2126 * red + 0.7152 * green + 0.0722 * blue; // per ITU-R BT.709
+
+    if (luminosity <= darknessThresholdValue) return 0;
+    if (luminosity >= lightnessThresholdValue) return 2;
+    console.log(luminosity)
+    return 1;
   }
 
   this.normalizeAnaglyphLevel = function(itemDomDepth, maxDomDepth) {
-    normalizedLevel = Math.floor(((16.0 / maxDomDepth) * itemDomDepth) - 16.0);
-    //if (normalizedLevel > 16) normalizedLevel = 16;
-    if (normalizedLevel > 0) normalizedLevel = 0;
+    var normalizedLevel = Math.ceil(((32.0 / maxDomDepth) * itemDomDepth) - 16.0);
+    if (normalizedLevel > 16) normalizedLevel = 16;
     if (normalizedLevel < -16) normalizedLevel = -16;
     return normalizedLevel;
   }
 
-  this.applyStyling = function() {
-    $( "[class^=anaglyphic]" ).each(function() {
-      var classNames = $(this).attr("class");
-      $(this).css( "color", "rgba(0,255,255,0.5)" );
-      $(this).css( "text-shadow", "rgba(255,0,0,0.5) " + classNames.split("_").pop() + "px 0px 0px");
-    });
-    //$( "img[class^=anaglyphic]" ).each(function() {
-      //$(this).css("opacity", "0.5")
-      //$(this).wrap('<span class="tintBlue"></span>');  
-      //$(this).clone().insertAfter(this).wrap('<span class="tintRed"></span>');
-    //});
+  this.getBackgroundColorOfLocation = function(canvas, top, left) {
+    var context = canvas.getContext( '2d' );
+    var pixelData = context.getImageData(left+2, top+2, 1, 1).data;
+    var pixelColorArray = [pixelData[0], pixelData[1], pixelData[2]];
+    return pixelColorArray;
   }
 
   this.init();
