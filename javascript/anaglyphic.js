@@ -46,7 +46,7 @@
   //returns 0-2, dark -> mid -> light
   this.getBackgroundDarknessLevel = function(red, green, blue) {
     var darknessThresholdValue = 60,
-    lightnessThresholdValue = 130,
+    lightnessThresholdValue = 150,
     luminosity = 0.299 * red + 0.587 * green + 0.114 * blue;//0.2126 * red + 0.7152 * green + 0.0722 * blue; // per ITU-R BT.709
 
     if (luminosity <= darknessThresholdValue) return 0;
@@ -56,7 +56,7 @@
   }
 
   this.normalizeAnaglyphLevel = function(itemDomDepth, maxDomDepth) {
-    var normalizedLevel = Math.ceil(((32.0 / maxDomDepth) * itemDomDepth) - 16.0);
+    var normalizedLevel = Math.ceil(((16.0 / maxDomDepth) * itemDomDepth) - 8.0);
     if (normalizedLevel > 16) normalizedLevel = 16;
     if (normalizedLevel < -16) normalizedLevel = -16;
     return normalizedLevel;
@@ -64,7 +64,7 @@
 
   this.getBackgroundColorOfLocation = function(canvas, top, left) {
     var context = canvas.getContext( '2d' );
-    var pixelData = context.getImageData(left+2, top+2, 1, 1).data;
+    var pixelData = context.getImageData(left, top, 1, 1).data;
     var pixelColorArray = [pixelData[0], pixelData[1], pixelData[2]];
     return pixelColorArray;
   }
