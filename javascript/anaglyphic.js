@@ -38,8 +38,6 @@
     }
     else{
       element.addClass('anaglyphic-no-style');
-      console.log(element);
-      console.log(backgroundColorArray);
     }    
   }
 
