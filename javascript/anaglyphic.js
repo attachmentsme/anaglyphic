@@ -8,12 +8,15 @@
   this.anaglyphPage = function() {
     var maxDomDepth = _this.findDomDepth();
     var hiddenCanvas;
+
+    _this.showSpinner();
     html2canvas(document.body, {
       onrendered: function(canvas) {
         $('body *').each(function(element) {
           var itemDomDepth = $(this).parents().length;
           _this.applyAnaglyphClassToElement($(this), _this.normalizeAnaglyphLevel(itemDomDepth, maxDomDepth), _this.getBackgroundColorOfLocation(canvas, $(this).offset().top, $(this).offset().left));
         });
+        _this.hideSpinner();
       }
     });
   }
@@ -26,6 +29,14 @@
       }
     });
     return treeDepth;
+  }
+
+  this.showSpinner = function() {
+    $('body').append('<div class="spinner-container"><div class="spinner rotate"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>Loading...</div>');
+  }
+
+  this.hideSpinner = function() {
+    $('.spinner-container').remove();
   }
 
   this.applyAnaglyphClassToElement = function(element, level, backgroundColorArray) {
@@ -49,7 +60,6 @@
 
     if (luminosity <= darknessThresholdValue) return 0;
     if (luminosity >= lightnessThresholdValue) return 2;
-    console.log(luminosity)
     return 1;
   }
 
