@@ -1,7 +1,7 @@
 #Anaglyphic.js
 
 #Maintained by [Attachments.me](https://attachments.me/)
-##Created by Dan Reed and Joshua Scott
+##Created by Dan Reed
 
 #####Welcome to the future!
 

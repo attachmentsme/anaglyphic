@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Anaglyphic",
-  "description": "This extension will transform the dom of any website into a 3d anaglyph.",
+  "description": "This extension will transform any website into a 3d anaglyph. Simply click the 3d glasses and let the extension do its magic.",
   "version": "0.1",
   "background": {
     "scripts":["background.js"]
@@ -12,13 +12,18 @@
     "javascript/third_party/jquery.min.js",
     "javascript/third_party/html2canvas.js"
   ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
   "permissions": [
     "http://*/*",
     "https://*/*",
     "tabs"
   ],
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "images/icon19.png"
   },
   "content_scripts": [{
     "matches": [

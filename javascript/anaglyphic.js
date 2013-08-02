@@ -8,17 +8,18 @@
   this.anaglyphPage = function() {
     var maxDomDepth = _this.findDomDepth();
     var hiddenCanvas;
-
-    _this.showSpinner();
-    html2canvas(document.body, {
-      onrendered: function(canvas) {
-        $('body *').each(function(element) {
-          var itemDomDepth = $(this).parents().length;
-          _this.applyAnaglyphClassToElement($(this), _this.normalizeAnaglyphLevel(itemDomDepth, maxDomDepth), _this.getBackgroundColorOfLocation(canvas, $(this).offset().top, $(this).offset().left));
-        });
-        _this.hideSpinner();
-      }
-    });
+    $(document).ready(function() {
+      _this.showSpinner();
+      html2canvas(document.body, {
+        onrendered: function(canvas) {
+          $('body *').each(function(element) {
+            var itemDomDepth = $(this).parents().length;
+            _this.applyAnaglyphClassToElement($(this), _this.normalizeAnaglyphLevel(itemDomDepth, maxDomDepth), _this.getBackgroundColorOfLocation(canvas, $(this).offset().top, $(this).offset().left));
+          });
+          _this.hideSpinner();
+        }
+      });
+    })
   }
 
   this.findDomDepth = function() {
